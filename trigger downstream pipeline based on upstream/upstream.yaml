@@ -1,0 +1,35 @@
+name: FirstPipeline_$(Month)_$(DayOfMonth)_$(Hours)_$(Minutes)_$(Build.BuildId)
+
+
+variables:
+   - name: 'EnvironmentTag1'
+     value: 'Verified'
+   - name: 'EnvironmentTag2'
+     value: 'Signed'
+
+trigger:
+ branches:
+    include:
+      - master 
+ tags:
+  include:
+    - v*
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+- stage: Production
+  displayName: Production
+  jobs:
+  - job: Production
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+      - script: echo This pipeline runs first !
+      - task: PowerShell@2
+        inputs:
+          targetType: 'inline'
+          script: |
+            Write-Host "##vso[build.addbuildtag]$(EnvironmentTag1)"
+            Write-Host "##vso[build.addbuildtag]$(EnvironmentTag2)"
+        enabled: true
