@@ -1,0 +1,73 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+name: DotNet Test Run 
+appendCommitMessageToRunName: false
+
+trigger: none 
+
+pool:
+  vmImage: windows-latest
+
+variables:
+- name: n
+  value: kohith
+- name: u
+  value: https://dev.azure.google.com
+- name: p
+  value: param
+- name: fn
+  value: function name kohith
+- name: s
+  value: storage kohith
+- name: fn
+  value: factory name kohith
+- name: system.debug
+  value: true
+- name: vari
+  value: -ParameterName kohith -env1-envName B_EnvName -env1-factoryName B_fn -env1-inteStorageAccountName B_ISA -env1-DhmsApiUrl B_URL
+
+steps:
+
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '6.x'
+- task: NuGetCommand@2
+  displayName: Nuget Restore 
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/*.sln'
+    feedsToUse: 'select'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: 'PrimeService.Tests/PrimeService.Tests.csproj'
+    workingDirectory: '$(Build.sourcesDirectory)'
+
+- task: VSTest@2
+  displayName: Testing run settings direct hard coded values
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: 'PrimeService.Tests\bin\Debug\net6.0\PrimeService.Tests.dll'
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    runSettingsFile: '$(Build.SourcesDirectory)/PrimeService.Tests/.runsettings'
+    #overrideTestrunParameters: '-ParameterName $(P) -env1-envName $(n) -env1-factoryName $(fn) -env1-inteStorageAccountName $(s) -env1-DhmsApiUrl $(u)'
+    overrideTestrunParameters: '-ParameterName kohith -env1-envName B_EnvName -env1-factoryName B_fn -env1-inteStorageAccountName B_ISA -env1-DhmsApiUrl B_URL'
+    codeCoverageEnabled: true
+    testRunTitle: '$(Build.BuildId)'
+
+- task: VSTest@2
+  displayName: Testing run settings read from variable in pipeline
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: 'PrimeService.Tests\bin\Debug\net6.0\PrimeService.Tests.dll'
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    runSettingsFile: '$(Build.SourcesDirectory)/PrimeService.Tests/.runsettings'
+    overrideTestrunParameters: '$(vari)'
+    codeCoverageEnabled: true
+    testRunTitle: '$(Build.BuildId)'
+  continueOnError: true
+  condition: succeededOrFailed()

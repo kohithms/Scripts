@@ -1,0 +1,20 @@
+A:\cases\Damian\Nunit\unit-testing-using-nunit\PrimeService\bin\Debug\netstandard2.0\PrimeService.deps.json
+A:\cases\Damian\Nunit\unit-testing-using-nunit\PrimeService\bin\Debug\netstandard2.0\PrimeService.dll
+A:\cases\Damian\Nunit\unit-testing-using-nunit\PrimeService\bin\Debug\netstandard2.0\PrimeService.pdb
+A:\cases\Damian\Nunit\unit-testing-using-nunit\PrimeService\obj\Debug\netstandard2.0\PrimeService.csproj.AssemblyReference.cache
+A:\cases\Damian\Nunit\unit-testing-using-nunit\PrimeService\obj\Debug\netstandard2.0\PrimeService.GeneratedMSBuildEditorConfig.editorconfig
+A:\cases\Damian\Nunit\unit-testing-using-nunit\PrimeService\obj\Debug\netstandard2.0\PrimeService.AssemblyInfoInputs.cache
+A:\cases\Damian\Nunit\unit-testing-using-nunit\PrimeService\obj\Debug\netstandard2.0\PrimeService.AssemblyInfo.cs
+A:\cases\Damian\Nunit\unit-testing-using-nunit\PrimeService\obj\Debug\netstandard2.0\PrimeService.csproj.CoreCompileInputs.cache
+A:\cases\Damian\Nunit\unit-testing-using-nunit\PrimeService\obj\Debug\netstandard2.0\PrimeService.dll
+A:\cases\Damian\Nunit\unit-testing-using-nunit\PrimeService\obj\Debug\netstandard2.0\PrimeService.pdb
+D:\workspace\VS 2019\Testing\Runsettings\PrimeService\bin\Debug\netstandard2.0\PrimeService.deps.json
+D:\workspace\VS 2019\Testing\Runsettings\PrimeService\bin\Debug\netstandard2.0\PrimeService.dll
+D:\workspace\VS 2019\Testing\Runsettings\PrimeService\bin\Debug\netstandard2.0\PrimeService.pdb
+D:\workspace\VS 2019\Testing\Runsettings\PrimeService\obj\Debug\netstandard2.0\PrimeService.csproj.AssemblyReference.cache
+D:\workspace\VS 2019\Testing\Runsettings\PrimeService\obj\Debug\netstandard2.0\PrimeService.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\VS 2019\Testing\Runsettings\PrimeService\obj\Debug\netstandard2.0\PrimeService.AssemblyInfoInputs.cache
+D:\workspace\VS 2019\Testing\Runsettings\PrimeService\obj\Debug\netstandard2.0\PrimeService.AssemblyInfo.cs
+D:\workspace\VS 2019\Testing\Runsettings\PrimeService\obj\Debug\netstandard2.0\PrimeService.csproj.CoreCompileInputs.cache
+D:\workspace\VS 2019\Testing\Runsettings\PrimeService\obj\Debug\netstandard2.0\PrimeService.dll
+D:\workspace\VS 2019\Testing\Runsettings\PrimeService\obj\Debug\netstandard2.0\PrimeService.pdb
